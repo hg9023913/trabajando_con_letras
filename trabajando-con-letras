@@ -1,0 +1,20 @@
+var letra = prompt("ingresa una palabra que desee :");
+console.log("la palabra tiene " + letra.length + " letras ");
+
+function esPalindromo(cadena) {
+// Convertir la cadena a minúsculas y eliminar espacios y signos de puntuación
+cadena = cadena.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
+
+// Comparar la cadena original con su reverso
+const cadenaReverso = cadena.split('').reverse().join('');
+
+return cadena === cadenaReverso;
+}
+
+// Ejemplo de uso
+const palabra = "Anilina";
+if (esPalindromo(palabra)) {
+console.log(`${palabra} es un palíndromo.`);
+} else {
+console.log(`${palabra} no es un palíndromo.`);
+}
